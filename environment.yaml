@@ -5,10 +5,10 @@
 name: basicserve
 
 channels:
-  - conda-forge
   - pytorch 
   - nvidia
-
+  - conda-forge
+  
 dependencies:
   - python=3.10
   - pip
@@ -19,13 +19,14 @@ dependencies:
   - fastapi
   - pydantic
   ## pytorch ones
-  - pytorch>=2.0.0
+  - pytorch # should be >= 2
   - torchvision 
   - torchaudio 
-#  - pytorch-cuda=11.7 # comment out if not in cuda env.
+  - pytorch-cuda=11.8 ## comment out if not in cuda env.
   - pip:
     - ray[default,data]>=2.5.0
     - transformers
     - pandas
     - pyarrow
-
+    - accelerate
+    - sentencepiece

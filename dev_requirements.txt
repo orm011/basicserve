@@ -1,0 +1,6 @@
+ipykernel
+ipywidgets
+py-spy
+line-profiler
+black
+pytest
