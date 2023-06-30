@@ -1,0 +1,31 @@
+# for anaconda/mamba
+# mamba env create -f environment.yaml
+# can also update and then run:
+# mamba env update -n basicserve --file environment.yaml    
+name: basicserve
+
+channels:
+  - conda-forge
+  - pytorch 
+  - nvidia
+
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  ## serving
+  - uvicorn
+  - fastapi
+  - pydantic
+  ## pytorch ones
+  - pytorch>=2.0.0
+  - torchvision 
+  - torchaudio 
+#  - pytorch-cuda=11.7 # comment out if not in cuda env.
+  - pip:
+    - ray[default,data]>=2.5.0
+    - transformers
+    - pandas
+    - pyarrow
+
